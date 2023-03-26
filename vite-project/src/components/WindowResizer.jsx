@@ -18,8 +18,7 @@ function WindowResizer() {
             <div>{windowSize.width <= 768 ? 'Small Screen Detected' : 'Large Screen Detected'}</div>
             <p>{isOnline ? 'Online' : 'Offline'}</p>
 
-            <input type="checkbox" value={themeContext.theme.background === themes.dark.background} 
-            onChange={() => darkMode ? themeContext.setTheme(themes.light) : themeContext.setTheme(themes.dark)} /> dark mode?
+            
         </div>
     );
 }

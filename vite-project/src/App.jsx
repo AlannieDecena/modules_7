@@ -8,7 +8,15 @@ import Login from './components/Login'
 import { ThemeProvider } from './context/ThemeContext'
 import Clock from './components/Clock'
 import Greeting from './components/Greeting'
-import Emojis from './components/Emojis'
+import {EmojiProvider} from './context/EmojiContext'
+import Emoji from './components/Emoji'
+import { UserProvider } from './context/UserContext'
+import AppRoutes from './routes/AppRoutes'
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
+
+
+
 
 function App() {
  
@@ -16,13 +24,22 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider >
+        <EmojiProvider>
+        <UserProvider>
+          <NavBar/>
 
-      <Counter />
-      <WindowResizer />
-      <Login />
-      <Clock/>
-      <Greeting/>
-      <Emojis />
+            <AppRoutes/>
+
+            {/* <Counter />
+            <WindowResizer />
+            <Login />
+            <Clock/>
+            <Emoji/>
+            <Greeting/> */}
+            <Footer/>
+          </UserProvider>
+        </EmojiProvider>
+      
 
 
       </ThemeProvider >

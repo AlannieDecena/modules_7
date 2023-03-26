@@ -2,14 +2,16 @@ import React from 'react';
 import useFormInput from '../hooks/useFormInput';
 import { ThemeContext, themes } from '../context/ThemeContext'
 import { useContext } from 'react';
+import { UserContext } from '../context/UserContext';
 
-function HookLogin() {
+function Login() {
 
     const themeContext = useContext(ThemeContext)
     const darkMode = themeContext.theme.background === themes.dark.background
     
     const usernameProps = useFormInput('')
     const passwordProps = useFormInput('')
+    const {username, setUsername} = useContext(UserContext)
 
     const [loggedIn, setLoggedIn] = React.useState(false)
     const [errMsg, setErrMsg] = React.useState('')
@@ -67,12 +69,9 @@ function HookLogin() {
             }
             <p>{errMsg}</p>
 
-            <input type="checkbox" value={themeContext.theme.background === themes.dark.background} 
-            onChange={() => darkMode ? themeContext.setTheme(themes.light) : themeContext.setTheme(themes.dark)} /> dark mode?
-
-
+           
         </div>
     );    
 }
 
-export default HookLogin
+export default Login

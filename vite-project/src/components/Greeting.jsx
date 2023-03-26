@@ -6,9 +6,7 @@ function Greeting() {
     return (
         <div className="componentBox" >
 
-            <h2>Hook greeting</h2>
-
-            <p>{greet}</p>
+            <h2>{greet}</h2>
 
             <button onClick={() => setGreet('Hello Alannie')}>Change Greeting</button>
 
