@@ -1,0 +1,58 @@
+*{
+  /* background-color: rebeccapurple; */
+
+}
+
+
+
+#root {
+    height: 100hv;
+    margin: 0 ;
+    text-align: center;
+    display: flex;
+    background-color: white;
+    
+  }
+.About{
+  color:#3a3a3a;
+}
+
+.card-container {
+  margin-top: 2rem;
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+.CardBack, .CardFront{
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  width: 200px;
+  height: 250px;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+
+}
+
+  
+  .CardBack {
+    background-color: #3a3a3a;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    background-color:white;
+    font-size: large;
+    font-weight: bolder;
+    padding: 10px;
+  }
+
+
+  img{
+    width: inherit;
+    height: inherit;
+    border-radius: 2rem;
+    /* max-width: 100% */
+  }

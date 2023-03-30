@@ -5,7 +5,8 @@ import './App.css'
 import Counter from './components/Counter'
 import WindowResizer from './components/WindowResizer'
 import Login from './components/Login'
-import { ThemeProvider } from './context/ThemeContext'
+import { MyThemeProvider } from './context/ThemeContext'
+import { ThemeProvider } from "@mui/material/styles";
 import Clock from './components/Clock'
 import Greeting from './components/Greeting'
 import {EmojiProvider} from './context/EmojiContext'
@@ -14,8 +15,9 @@ import { UserProvider } from './context/UserContext'
 import AppRoutes from './routes/AppRoutes'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
-
-
+import  SimpleDialog  from './components/SimpleDialog'
+import NavBarMui from './components/NavBarMui'
+import { purpleTheme } from './themes/PurpleTheme'
 
 
 function App() {
@@ -23,26 +25,27 @@ function App() {
 
   return (
     <div className="App">
-      <ThemeProvider >
+      <ThemeProvider theme={purpleTheme}>
+      
         <EmojiProvider>
         <UserProvider>
-          <NavBar/>
-
-            <AppRoutes/>
-
+          {/* <NavBar/> */}
+          <NavBarMui/> 
+            <AppRoutes/> 
+          <SimpleDialog/> 
             {/* <Counter />
             <WindowResizer />
             <Login />
             <Clock/>
             <Emoji/>
             <Greeting/> */}
-            <Footer/>
+            <Footer/> 
           </UserProvider>
         </EmojiProvider>
-      
 
+      </ThemeProvider > 
 
-      </ThemeProvider >
+ 
 
     </div>
   )

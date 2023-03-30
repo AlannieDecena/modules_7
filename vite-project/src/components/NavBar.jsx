@@ -9,6 +9,7 @@ function NavBar() {
                 <li><NavLink to="/login">Login</NavLink></li>
                 <li><NavLink to="/post">Post</NavLink></li>
                 <li><NavLink to="/dashboard">Dashboard</NavLink></li>
+                {/* <li><NavLink to="/students">Students</NavLink></li> */}
             </ul>
         </div>
     )

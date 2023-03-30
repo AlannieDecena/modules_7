@@ -48,7 +48,7 @@ function Login() {
     return (
         <div className="Login componentBox" style={{backgroundColor: themeContext.theme.background, color: themeContext.theme.foreground}}>
 
-            <div>{loggedIn ? 'Hello' + usernameProps.value : 'Please log in'}</div>
+            <div>{loggedIn ? 'Hello ' + usernameProps.value : 'Please log in'}</div>
 
             {!loggedIn && loginAttempts < 5 &&
 

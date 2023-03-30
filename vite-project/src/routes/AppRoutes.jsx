@@ -7,6 +7,11 @@ import Home from "../pages/Home"
 import Post from "../components/Post"
 import Dashboard, {DashboardMessages, DashboardTasks} from "../pages/Dashboard"
 import PageNotFound from "../pages/PageNotFound"
+import StudentList from "../components/StudentList"
+import SignIn from "../components/SignIn"
+import StudentCard from "../components/StudentCard"
+import { SimpleDialog } from "../components/SimpleDialog"
+
 
 //special component containing all the possible routes for this app
 //any props passed into AppRoutes will also be passed onto child components using {...props}
@@ -26,9 +31,13 @@ function AppRoutes(props) {
 
             <Route path='/about' element={<About {...props} />} />
 
-            <Route path='/login' element={<Login {...props} />} />
+            <Route path='/login' element={<SignIn {...props} />} />
 
             <Route path='/post' element={<Post {...props} />} />
+
+            <Route path='/students' element={<StudentList {...props} />} >
+            <Route path=":id" element={<SimpleDialog />} />
+            </Route>
 
             <Route exact path='/dashboard' element={<Dashboard {...props} />} >
                 <Route path=":messages" element={<DashboardMessages />} />

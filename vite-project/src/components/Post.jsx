@@ -14,10 +14,10 @@ export default function App() {
     axios.get(baseURL).then((response) => {
       setPost(response.data); //response is returned as an object. 
     });
-  }, );
+  },[] );
 
   return (
-    <div classname= "componentBox">
+    <div className= "componentBox">
       <h4>{post.title}</h4>
       <p>{post.body}</p>
     </div>
