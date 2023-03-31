@@ -22,12 +22,10 @@ function MpRoutes(props) {
             <Route path='/about' element={<MpAbout {...props} />} />
             <Route path='/add' element={<AddMeme {...props} />} />
 
-            {/* special route to handle if none of the above match */}
-            {/* <Route path="*" element={<PageNotFound />} />             */}
+           
         </Routes>
     )
 }
 
-//split up the components we have created so far and make different pages for them
 
 export default MpRoutes

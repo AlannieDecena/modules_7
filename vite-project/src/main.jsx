@@ -10,8 +10,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
     {/* <App /> */}
-    {/* <BasicApp /> */}
-    <MpApp/>
+    <BasicApp />
+    {/* <MpApp/> */}
     </BrowserRouter>
   </React.StrictMode>,
 )

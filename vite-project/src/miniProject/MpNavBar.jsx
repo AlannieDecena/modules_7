@@ -18,7 +18,7 @@ import { NavLink } from 'react-router-dom';
 
 
 
-const pages = ['Meme','About','Add'];
+const pages = ['Home','About','Add'];
 
 
 function MpNavBar() {
@@ -41,9 +41,7 @@ function MpNavBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon 
-          sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} 
-          />
+          
           <Typography
             variant="h6"
             noWrap
@@ -59,7 +57,7 @@ function MpNavBar() {
               textDecoration: 'none',
             }}
           >
-            {/* LOGO */}
+            MEMES
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -98,9 +96,7 @@ function MpNavBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon 
-          sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} 
-          />
+          
           <Typography
             variant="h5"
             noWrap
@@ -117,7 +113,7 @@ function MpNavBar() {
               textDecoration: 'none',
             }}
           >
-            {/* LOGO */}
+            MEMES
           </Typography>
           
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>

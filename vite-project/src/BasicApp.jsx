@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import BaiscNavBar from './BaiscMedia/BasicNavBar'
 import BasicPost from './BaiscMedia/BasicPost'
+import MakePost from './BaiscMedia/MakePost'
 
 function NewApp() {
  
@@ -12,6 +13,7 @@ function NewApp() {
       <div className="App">
   
           <BaiscNavBar/>
+          <MakePost/>
           <BasicPost/>
   
       </div>

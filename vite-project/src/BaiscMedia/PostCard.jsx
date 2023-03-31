@@ -8,7 +8,7 @@ import SimpleDialog from '../components/SimpleDialog';
 import SimpleDialogDemo from '../components/SimpleDialog';
 
 
-export default function StudentCard({id, name, location, set = 'set1'}) {
+export default function PostCard({id, title, body, set="set4" }) {
   
   const [open, setOpen] = React.useState(false)
   return (
@@ -17,17 +17,17 @@ export default function StudentCard({id, name, location, set = 'set1'}) {
         <CardMedia
           component="img"
           height="140"
-          image={`https://robohash.org/${name}?size=50x50&set=${set}`}
-          alt={name}
+          image={`https://robohash.org/${title}?size=50x50&set=${set}`}
+          alt={title}
           
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div" >
-            {name}
+            {title}
             
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {location}
+            {body}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -35,7 +35,7 @@ export default function StudentCard({id, name, location, set = 'set1'}) {
        {/* <Button size="small" color="primary" key={id} onClick={() => {SimpleDialog}} >  */}
        {/* <Button key={id} onClick={() => setOpen(true)}>Share</Button> */}
        {/* <SimpleDialog id = {id}/> */}
-       <SimpleDialogDemo id = {id} name ={name} location={location}/>
+       <SimpleDialogDemo id = {id} title ={title} body={body}/>
        
        {/* <StudentList key={student.id} id={student.id} name={student.name} location={student.location}/> */}
       </CardActions>
